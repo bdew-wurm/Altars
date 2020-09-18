@@ -1,0 +1,10 @@
+model.decoration.altar.huge.marble = hugeMarbleAltar/hugeMarbleAltar.wom
+model.decoration.altar.huge.marble.empty = hugeMarbleAltar/hugeMarbleAltar.wom
+model.decoration.altar.huge.marble.unfinished = hugeMarbleAltar/hugeMarbleAltar.wom
+
+model.decoration.altar.sacrificial = sacrificialAltar/sacrificialAltar.wom
+model.decoration.altar.sacrificial.empty = sacrificialAltar/sacrificialAltar.wom
+model.decoration.altar.sacrificial.unfinished = sacrificialAltar/sacrificialAltar.wom
+
+model.structure.temple = temple/temple.wom
+model.structure.temple.stone = temple/temple.wom

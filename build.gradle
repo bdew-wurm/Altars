@@ -21,8 +21,8 @@ jar {
 
 task pack(type: Zip) {
     from fileTree(dir: 'pack', include: '**')
-    destinationDir = file("build/pack")
-    archiveName "shop-sign_additions.zip"
+    destinationDirectory = file("build/pack")
+    archiveName "altars-pack.jar"
 }
 
 task dist(type: Zip) {
