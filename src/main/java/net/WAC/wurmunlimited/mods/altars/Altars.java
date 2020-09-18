@@ -14,15 +14,13 @@ public class Altars implements WurmServerMod, Configurable, ItemTemplatesCreated
 
     @Override
     public void configure(Properties properties) {
-        AltarItems.hugeMarbleAltarTemplateId = Integer.parseInt(properties.getProperty("Huge_Marble_Altar_templateId", String.valueOf(AltarItems.hugeMarbleAltarTemplateId)));
         AltarItems.marbleAltarSizeMultiplier = Float.parseFloat(properties.getProperty("Huge_Marble_Altar_Size_Multiplier", String.valueOf(AltarItems.marbleAltarSizeMultiplier)));
-        AltarItems.sacrificialAltarTemplateId = Integer.parseInt(properties.getProperty("Sacrificial_Altar_templateId", String.valueOf(AltarItems.sacrificialAltarTemplateId)));
         AltarItems.sacrificialAltarSizeMultiplier = Float.parseFloat(properties.getProperty("Sacrificial_Altar_Size_Multiplier", String.valueOf(AltarItems.sacrificialAltarSizeMultiplier)));
     }
 
     @Override
     public void onItemTemplatesCreated() {
-        new AltarItems();
+         AltarItems.register();
     }
 
 }

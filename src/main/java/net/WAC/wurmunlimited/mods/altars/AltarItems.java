@@ -7,19 +7,24 @@ import com.wurmonline.server.items.*;
 import com.wurmonline.server.skills.SkillList;
 import com.wurmonline.shared.constants.IconConstants;
 import org.gotti.wurmunlimited.modloader.interfaces.WurmServerMod;
+import org.gotti.wurmunlimited.modsupport.IdFactory;
+import org.gotti.wurmunlimited.modsupport.IdType;
 
 import java.io.IOException;
 
 public class AltarItems implements WurmServerMod, ItemTypes, MiscConstants {
 
-    public static int hugeMarbleAltarTemplateId = 9918;
+    public static int hugeMarbleAltarTemplateId;
     public static float marbleAltarSizeMultiplier = 1f;
-    public static int sacrificialAltarTemplateId = 9919;
+    public static int sacrificialAltarTemplateId;
     public static float sacrificialAltarSizeMultiplier = 1f;
 
-    public AltarItems() {
+    public static void register() {
+        hugeMarbleAltarTemplateId = IdFactory.getIdFor("jubaroo.altars.marble", IdType.ITEMTEMPLATE);
+        sacrificialAltarTemplateId = IdFactory.getIdFor("jubaroo.altars.sacrificial", IdType.ITEMTEMPLATE);
+
         try {
-            ItemTemplateCreator.createItemTemplate(hugeMarbleAltarTemplateId, ItemSizes.ITEM_SIZE_HUGE, "Altar", "Altars", "almost full", "somewhat occupied", "half-full", "emptyish",
+            ItemTemplateCreator.createItemTemplate(hugeMarbleAltarTemplateId, ItemSizes.ITEM_SIZE_HUGE, "altar", "altars", "almost full", "somewhat occupied", "half-full", "emptyish",
                     "A huge marble altar with beautiful hand carved designs all around it.",
                     new short[]{
                             ITEM_TYPE_NAMED,
@@ -52,7 +57,7 @@ public class AltarItems implements WurmServerMod, ItemTypes, MiscConstants {
 
 
         try {
-            ItemTemplateCreator.createItemTemplate(sacrificialAltarTemplateId, "Sacrificial Altar", "Sacrificial Altars", "almost full", "somewhat occupied", "half-full", "emptyish",
+            ItemTemplateCreator.createItemTemplate(sacrificialAltarTemplateId, "sacrificial altar", "sacrificial altars", "almost full", "somewhat occupied", "half-full", "emptyish",
                     "A stone altar with foreign markings and dark energy. It is mainly used by cultists for rituals and sacrificing.",
                     new short[]{
                             ITEM_TYPE_NAMED,
